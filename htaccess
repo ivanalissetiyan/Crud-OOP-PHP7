@@ -1,0 +1,9 @@
+Options All -Indexes
+ErrorDocument 404 "<html><head><title>Peringatan!</title></head><body><h2><tt>Alamat yang anda maksud salah..!</tt></h2></body></html>"
+RewriteEngine On
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^index.html$ ?
+RewriteRule ^([^/\.]+)/?$ ?page=$1
+RewriteRule ^([^/\.]+)/([^/\.]+)/?$ ?page=$1&action=$2
+
